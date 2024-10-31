@@ -55,12 +55,6 @@ build CMakeFiles/courseWorkavto.dir/main.cpp.o: CXX_COMPILER__courseWorkavto_uns
   OBJECT_DIR = CMakeFiles/courseWorkavto.dir
   OBJECT_FILE_DIR = CMakeFiles/courseWorkavto.dir
 
-build CMakeFiles/courseWorkavto.dir/Car.cpp.o: CXX_COMPILER__courseWorkavto_unscanned_Debug /home/vasya5500u/CLionProjects/courseWorkavto/Car.cpp || cmake_object_order_depends_target_courseWorkavto
-  DEP_FILE = CMakeFiles/courseWorkavto.dir/Car.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/courseWorkavto.dir
-  OBJECT_FILE_DIR = CMakeFiles/courseWorkavto.dir
-
 build CMakeFiles/courseWorkavto.dir/Admin.cpp.o: CXX_COMPILER__courseWorkavto_unscanned_Debug /home/vasya5500u/CLionProjects/courseWorkavto/Admin.cpp || cmake_object_order_depends_target_courseWorkavto
   DEP_FILE = CMakeFiles/courseWorkavto.dir/Admin.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
@@ -135,7 +129,7 @@ build CMakeFiles/courseWorkavto.dir/ForeignCar.cpp.o: CXX_COMPILER__courseWorkav
 #############################################
 # Link the executable courseWorkavto
 
-build courseWorkavto: CXX_EXECUTABLE_LINKER__courseWorkavto_Debug CMakeFiles/courseWorkavto.dir/main.cpp.o CMakeFiles/courseWorkavto.dir/Car.cpp.o CMakeFiles/courseWorkavto.dir/Admin.cpp.o CMakeFiles/courseWorkavto.dir/Customer.cpp.o CMakeFiles/courseWorkavto.dir/SupplierRequest.cpp.o CMakeFiles/courseWorkavto.dir/AdminManagement.cpp.o CMakeFiles/courseWorkavto.dir/CarManagement.cpp.o CMakeFiles/courseWorkavto.dir/CustomerManagement.cpp.o CMakeFiles/courseWorkavto.dir/SupplierRequestManagement.cpp.o CMakeFiles/courseWorkavto.dir/MainMenu.cpp.o CMakeFiles/courseWorkavto.dir/NewCar.cpp.o CMakeFiles/courseWorkavto.dir/OldDomesticCar.cpp.o CMakeFiles/courseWorkavto.dir/ForeignCar.cpp.o
+build courseWorkavto: CXX_EXECUTABLE_LINKER__courseWorkavto_Debug CMakeFiles/courseWorkavto.dir/main.cpp.o CMakeFiles/courseWorkavto.dir/Admin.cpp.o CMakeFiles/courseWorkavto.dir/Customer.cpp.o CMakeFiles/courseWorkavto.dir/SupplierRequest.cpp.o CMakeFiles/courseWorkavto.dir/AdminManagement.cpp.o CMakeFiles/courseWorkavto.dir/CarManagement.cpp.o CMakeFiles/courseWorkavto.dir/CustomerManagement.cpp.o CMakeFiles/courseWorkavto.dir/SupplierRequestManagement.cpp.o CMakeFiles/courseWorkavto.dir/MainMenu.cpp.o CMakeFiles/courseWorkavto.dir/NewCar.cpp.o CMakeFiles/courseWorkavto.dir/OldDomesticCar.cpp.o CMakeFiles/courseWorkavto.dir/ForeignCar.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/courseWorkavto.dir
   POST_BUILD = :

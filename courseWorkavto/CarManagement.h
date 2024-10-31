@@ -4,7 +4,6 @@
 #include "NewCar.h"
 #include "OldDomesticCar.h"
 #include "ForeignCar.h"
-#include "Car.h"
 #include <vector>
 #include <string>
 
