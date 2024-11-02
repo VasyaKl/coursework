@@ -11,12 +11,14 @@ private:
     std::string customerPhone;
     std::string carBrand;
     int carYear;
-    std::string specifications;
+    std::string color;          // Виділяємо колір в окреме поле
     std::string condition;
     double price;
     std::string status;
     std::string requestDate;
     bool isValid;
+
+    void extractColor(const std::string& specs);  // Новий метод для отримання кольору
 
 public:
     SupplierRequest();
@@ -30,7 +32,7 @@ public:
     std::string getCustomerPhone() const;
     std::string getCarBrand() const;
     int getCarYear() const;
-    std::string getSpecifications() const;
+    std::string getColor() const;     // Новий геттер для кольору
     std::string getCondition() const;
     double getPrice() const;
     std::string getStatus() const;

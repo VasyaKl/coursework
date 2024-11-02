@@ -53,17 +53,25 @@ void SupplierRequestManagement::displayCustomerRequests(const Customer& customer
 }
 
 void SupplierRequestManagement::loadRequestsFromFile() {
-    std::ifstream file(filename);
+    std::ifstream file(filename, std::ios::binary);
     if (!file) return;
 
+    // Перевірка BOM-маркера
+    char bom[3];
+    file.read(bom, 3);
+    if (!(bom[0] == (char)0xEF && bom[1] == (char)0xBB && bom[2] == (char)0xBF)) {
+        file.seekg(0);
+    }
+
     std::string line;
-    while (getline(file, line)) {
+    while (std::getline(file, line)) {
         if (!line.empty()) {
             SupplierRequest request;
-            request.fromCSV(line);
-            requests.push_back(request);
-            if (request.getId() >= nextRequestId) {
-                nextRequestId = request.getId() + 1;
+            if (request.fromCSV(line)) {
+                requests.push_back(request);
+                if (request.getId() >= nextRequestId) {
+                    nextRequestId = request.getId() + 1;
+                }
             }
         }
     }
@@ -71,11 +79,14 @@ void SupplierRequestManagement::loadRequestsFromFile() {
 }
 
 void SupplierRequestManagement::saveRequestsToFile() const {
-    std::ofstream file(filename);
+    std::ofstream file(filename, std::ios::binary);
     if (!file) {
         std::cerr << "Помилка збереження заяв!" << std::endl;
         return;
     }
+
+    // Запис BOM-маркера
+    file.write("\xEF\xBB\xBF", 3);
 
     for (const auto& request : requests) {
         file << request.toCSV() << std::endl;
